@@ -7,6 +7,7 @@ import Second from './Second'; // Keep Second import
 import Nav from './Nav';
 import Header from './Header';
 import Homepage from './pages/Homepage';
+import Card from './Card';
 
 const MyRoute = () => {
   return (
@@ -17,6 +18,7 @@ const MyRoute = () => {
 
         <Route path='/nav' element={<Nav/>}/>
         <Route path='/header' element={<Header/>}/>
+        <Route path='/card' element={<Card/>}/>
         
       </Routes>
     </Router>
