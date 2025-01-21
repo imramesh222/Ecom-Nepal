@@ -8,6 +8,7 @@ import Nav from './Nav';
 import Header from './Header';
 import Homepage from './pages/Homepage';
 import Card from './Card';
+import Counter from './Counter';
 
 const MyRoute = () => {
   return (
@@ -19,6 +20,7 @@ const MyRoute = () => {
         <Route path='/nav' element={<Nav/>}/>
         <Route path='/header' element={<Header/>}/>
         <Route path='/card' element={<Card/>}/>
+        <Route path='/counter' element={<Counter/>}/>
         
       </Routes>
     </Router>
