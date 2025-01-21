@@ -1,51 +1,24 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <>
-       <footer class="bg-dark text-white py-4">
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-md-4">
-          <h5>About Us</h5>
-          <p>
-            We are committed to providing the best services for our clients.
-            Learn more about our journey and values.
-          </p>
+    <footer className="bg-gray-800 text-gray-400">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="flex justify-between items-center">
+          <span className="text-sm">
+            &copy; {new Date().getFullYear()} ShopNepal. All rights reserved.
+          </span>
+          <div className="flex space-x-4">
+            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <a href="#" className="hover:text-white">Terms of Service</a>
+          </div>
         </div>
-
-       
-        <div class="col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Services</a></li>
-            <li><a href="#" class="text-white text-decoration-none">About</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
-          </ul>
-        </div>
-
-     
-        <div class="col-md-4">
-          <h5>Contact Us</h5>
-          <p><i class="bi bi-envelope"></i> contact@example.com</p>
-          <p><i class="bi bi-telephone"></i> +1 123-456-7890</p>
-          <p><i class="bi bi-geo-alt"></i> 123 Main St, Anywhere, USA</p>
+        <div className="mt-4 text-center text-sm">
+          Made with ❤️ in Nepal
         </div>
       </div>
-      
-      <hr class="border-white my-3"/>
+    </footer>
+  );
+};
 
-      
-      <div class="text-center">
-        <p class="mb-0">&copy; 2024 Your Company. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-    </>
-  )
-}
-
-export default Footer
+export default Footer;

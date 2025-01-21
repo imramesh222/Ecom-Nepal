@@ -1,12 +1,10 @@
 import React from 'react';
 
 import { Route,BrowserRouter as Router,Routes} from 'react-router-dom'
-
-import First from './First'; // Fixed: import First correctly
-import Second from './Second'; // Keep Second import
-import Nav from './Nav';
-import Header from './Header';
 import Homepage from './pages/Homepage';
+
+import Layout from './pages/Layout';
+import ProductPage from './pages/ProductPage';
 import Card from './Card';
 import Counter from './Counter';
 
@@ -14,13 +12,13 @@ const MyRoute = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Homepage />} /> {/* Fixed: Correct First component */}
-        <Route path='/second' element={<Second />} /> {/* Second component unchanged */}
-
-        <Route path='/nav' element={<Nav/>}/>
-        <Route path='/header' element={<Header/>}/>
-        <Route path='/card' element={<Card/>}/>
-        <Route path='/counter' element={<Counter/>}/>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Homepage/>}/>
+          <Route path='/products' element={<ProductPage/>} />
+          <Route path='/card' element={<Card/>}/>
+          <Route path='/counter' element={<Counter/>}/>
+          <Route path='/productPage' element={<ProductPage/>}/>
+        </Route> 
         
       </Routes>
     </Router>
