@@ -70,20 +70,14 @@ function ProductPage() {
   const [showMoreClicked, setClicked] = useState(false);
 
   // Fetch products from API
-  // useEffect(() => {
-  //   axios
-  //     .get("https://fakestoreapi.com/products")
-  //     .then((res) => setProducts(res.data)) // Set the fetched products
-  //     .catch((err) => console.error(err));
-  // }, []);
-
-  useEffect(()=>{
+  useEffect(() => {
     axios
-    .get("https://fakestoreapi.com/products")
-    .then((res)=>setProducts(res.data))
-    .catch((err)=>console.log(err))
-  })
+      .get("https://fakestoreapi.com/products")
+      .then((res) => setProducts(res.data)) // Set the fetched products
+      .catch((err) => console.error(err));
+  }, []);
 
+  
   // Handle "Show More"
   const showMore = () => {
     setLimit((prevLimit) => prevLimit + 6);
@@ -99,11 +93,19 @@ function ProductPage() {
   return (
     <div className="p-4">
       {/* Products Grid */}
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {/* <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {products.slice(0, limit).map((product) => (
           <Card key={product.id} item={product} />
         ))}
+      </div> */}
+
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {
+          products.slice(0,limit).map((product)=>(<Card key={product.id} item={product}></Card>))
+        }
       </div>
+
+
 
       {/* Show More & Show Less Buttons */}
       <div className="text-center mt-8">

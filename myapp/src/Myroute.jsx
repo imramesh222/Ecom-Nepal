@@ -7,6 +7,8 @@ import Layout from './pages/Layout';
 import ProductPage from './pages/ProductPage';
 import Card from './Card';
 import Counter from './Counter';
+import Table from './Table';
+
 
 const MyRoute = () => {
   return (
@@ -18,6 +20,10 @@ const MyRoute = () => {
           <Route path='/card' element={<Card/>}/>
           <Route path='/counter' element={<Counter/>}/>
           <Route path='/productPage' element={<ProductPage/>}/>
+
+          <Route path='/table' element={<Table/>}/>
+
+          {/* <Route path='/first'element={<First/>}/> */}
         </Route> 
         
       </Routes>
