@@ -9,7 +9,7 @@ const Table = ({ data, columns }) => {
             {columns.map((col) => (
               <th
                 key={col.accessor}
-                className="px-4 py-2 border border-gray-300 text-left text-gray-700 font-medium"
+                className="px-4 py-2 border border-gray-300 text-left text-gray-600 font-medium"
               >
                 {col.header}
               </th>
